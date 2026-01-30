@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="792.0" styleClass="root-pane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.controllers.LoginController">
+    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: c9ada7;" HBox.hgrow="ALWAYS">
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label onMouseClicked="#handleCloseApp" styleClass="close-label" text="✕">
+                <font>
+                    <Font name="System Bold" size="27.0" />
+                </font>
+            </Label>
+        </HBox>
+    </VBox>
+    <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #f2e9e4;" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="20.0" />
+        </padding>
+        <Label styleClass="title-label" text="Login" textFill="#4a4e69">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+            <VBox spacing="5.0">
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <Label text="Username:" textFill="#4a4e69">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <TextField fx:id="usernameTxtField" prefHeight="40.0" promptText="enter username" styleClass="text-field">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+            </VBox>
+            <VBox spacing="5.0">
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <Label text="Password:" textFill="#4a4e69">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <StackPane>
+                    <PasswordField fx:id="passwordField" promptText="enter password" />
+                    <TextField fx:id="passwordTxtField" prefHeight="40.0" promptText="enter password" styleClass="password-field" visible="false">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </TextField>
+                    <CheckBox fx:id="showPasswordCheckBox" mnemonicParsing="false" onAction="#togglePasswordVisibility" StackPane.alignment="CENTER_RIGHT">
+                        <StackPane.margin>
+                            <Insets />
+                        </StackPane.margin>
+                        <padding>
+                            <Insets right="20.0" />
+                        </padding>
+                    </CheckBox>
+                </StackPane>
+            </VBox>
+            <Label fx:id="commonErrorLbl" textFill="#dd4545">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label onMouseClicked="#handleCreateAccount" opacity="0.75" style="-fx-underline: true;" styleClass="hyperlink" text="Create an account" textFill="#4a4e69">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Label>
+            <Label onMouseClicked="#handleForgotPassword" opacity="0.75" style="-fx-underline: true;" styleClass="hyperlink" text="Forgot your password?" textFill="#4a4e69">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Label>
+        </VBox>
+        <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginPressed" styleClass="login-button" text="Login" />
+    </VBox>
+</HBox>

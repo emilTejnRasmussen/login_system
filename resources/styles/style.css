@@ -1,0 +1,185 @@
+/* =========================
+   GLOBAL BASE
+   ========================= */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+
+/* =========================
+   TITLE + LABELS
+   ========================= */
+
+.title-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3b4a6b;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+    -fx-padding: 0 0 4 2;
+}
+
+.info-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777;
+}
+
+
+/* =========================
+   INPUT FIELDS
+   ========================= */
+
+.text-field,
+.password-field {
+
+    /* Fixed height (prevents VBox shifting) */
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-max-height: 42px;
+
+    /* Padding + font */
+    -fx-padding: 10 14;
+    -fx-font-size: 14px;
+
+    /* Rounded corners */
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    /* Colors */
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 1;
+
+    /* Text */
+    -fx-text-fill: #333;
+    -fx-prompt-text-fill: #999;
+
+    /* Soft shadow */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05),
+    4, 0, 0, 1);
+}
+
+
+/* Hover */
+.text-field:hover,
+.password-field:hover {
+    -fx-border-color: #b0b0b0;
+}
+
+
+/* Focus (NO border width change = NO jumping!) */
+.text-field:focused,
+.password-field:focused {
+
+    -fx-border-color: #3b4a6b;
+    -fx-border-width: 1;
+
+    -fx-effect: dropshadow(gaussian, rgba(59,74,107,0.25),
+    10, 0, 0, 2);
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.login-button {
+    -fx-background-color: #3b4a6b;
+    -fx-text-fill: white;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 12;
+    -fx-padding: 12 30;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18),
+    8, 0, 0, 3);
+}
+
+.login-button:hover {
+    -fx-background-color: #52648f;
+}
+
+.login-button:pressed {
+    -fx-background-color: #2c364f;
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+
+/* =========================
+   CHECKBOX (Show Password)
+   ========================= */
+
+.check-box {
+    -fx-font-size: 12px;
+    -fx-text-fill: #444;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #3b4a6b;
+}
+
+
+/* =========================
+   HYPERLINKS
+   ========================= */
+
+.hyperlink {
+    -fx-text-fill: #3b4a6b;
+    -fx-font-size: 12px;
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #52648f;
+    -fx-underline: true;
+}
+
+
+/* =========================
+   ERROR + SUCCESS MESSAGES
+   ========================= */
+
+.error-label {
+    -fx-text-fill: #c0392b;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.success-label {
+    -fx-text-fill: #2e8b57;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.close-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: center;
+    -fx-min-width: 32px;
+    -fx-min-height: 28px;
+
+    -fx-cursor: hand;
+
+    -fx-background-radius: 8;
+}
+
+.close-label:hover {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+}
+
+.close-label:pressed {
+    -fx-background-color: #922b21;
+}
