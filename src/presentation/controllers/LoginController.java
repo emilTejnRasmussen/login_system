@@ -61,8 +61,9 @@ public class LoginController implements InitializableController
         ViewManager.showView(View.CREATE_ACCOUNT);
     }
 
-    public void handleForgotPassword()
+    public void handleForgotPassword() throws IOException
     {
+        ViewManager.showView(View.DASHBOARD);
     }
 
     public void togglePasswordVisibility()

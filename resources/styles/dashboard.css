@@ -1,0 +1,59 @@
+.menu-vbox {
+    -fx-background-color: #3b4a6b;
+
+}
+
+.menu-button {
+    -fx-background-color: rgba(255,255,255,0.16);
+    -fx-text-fill: #f2f7ff;
+
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 15px;
+
+    -fx-padding: 10 18;
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: rgba(255,255,255,0.18);
+    -fx-border-width: 1;
+
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(120,170,255,0.30);
+    -fx-border-color: rgba(180,210,255,0.55);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 10, 0, 0, 2);
+}
+
+.menu-button:pressed {
+    -fx-background-color: rgba(120,170,255,0.20);
+    -fx-translate-y: 1;
+}
+
+.menu-button.active {
+    -fx-background-color: rgba(80,140,255,0.45);
+    -fx-border-color: rgba(210,230,255,0.7);
+    -fx-font-weight: bold;
+}
+
+.menu-separator {
+    -fx-padding: 8 0;
+}
+
+.menu-separator .line {
+    -fx-border-color: rgba(255,255,255,0.18);
+    -fx-border-width: 1;
+}
+
+.menu-button.active {
+    -fx-background-color: rgba(80,140,255,0.45);
+    -fx-border-color: rgba(210,230,255,0.7);
+
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);
+}
+

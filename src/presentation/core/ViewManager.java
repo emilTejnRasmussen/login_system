@@ -45,6 +45,9 @@ public class ViewManager
         {
             primaryStage.getScene().setRoot(root);
         }
+
+        primaryStage.sizeToScene();
+        primaryStage.centerOnScreen();
     }
 
     public static void showView(View view, User loggedInUser) throws IOException {
@@ -67,6 +70,8 @@ public class ViewManager
         } else {
             primaryStage.getScene().setRoot(root);
         }
+        primaryStage.sizeToScene();
+        primaryStage.centerOnScreen();
     }
 }
 
